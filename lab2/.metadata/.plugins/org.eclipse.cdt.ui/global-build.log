@@ -299,3 +299,10 @@ Finished building: Lab2_NTLuan.bin
  
  
  
+14:50:31 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7200	     20	   1652	   8872	   22a8	Lab2_NTLuan.elf
+Finished building: default.size.stdout
+ 
