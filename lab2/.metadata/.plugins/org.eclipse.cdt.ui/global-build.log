@@ -299,758 +299,107 @@ Finished building: Lab2_NTLuan.bin
  
  
  
-13:14:37 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+14:50:31 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
-arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:98:9: warning: implicit declaration of function 'setTimer2'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   98 |         setTimer2(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:99:9: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   99 |         setTimer3(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:108:25: warning: implicit declaration of function 'HAL_GPIO_Toggle'; did you mean 'HAL_GPIO_TogglePin'? [-Wimplicit-function-declaration]
-  108 |                         HAL_GPIO_Toggle(LED_RED_GPIO_Port, LED_RED_Pin);
-      |                         ^~~~~~~~~~~~~~~
-      |                         HAL_GPIO_TogglePin
-../Core/Src/main.c:112:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  112 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:112:21: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:113:33: error: 'number_status' undeclared (first use in this function); did you mean 'number_status4'?
-  113 |                         switch (number_status) {
-      |                                 ^~~~~~~~~~~~~
-      |                                 number_status4
-../Core/Src/main.c:120:21: error: 'timer3_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  120 |                 if (timer3_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:103:13: warning: unused variable 'number_status4' [-Wunused-variable]
-  103 |         int number_status4 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:102:13: warning: unused variable 'number_status3' [-Wunused-variable]
-  102 |         int number_status3 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:101:13: warning: unused variable 'number_status2' [-Wunused-variable]
-  101 |         int number_status2 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:100:13: warning: unused variable 'number_status1' [-Wunused-variable]
-  100 |         int number_status1 = 0;
-      |             ^~~~~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:14:52 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:98:9: warning: implicit declaration of function 'setTimer2'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   98 |         setTimer2(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:99:9: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   99 |         setTimer3(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:108:25: warning: implicit declaration of function 'HAL_GPIO_Toggle'; did you mean 'HAL_GPIO_TogglePin'? [-Wimplicit-function-declaration]
-  108 |                         HAL_GPIO_Toggle(LED_RED_GPIO_Port, LED_RED_Pin);
-      |                         ^~~~~~~~~~~~~~~
-      |                         HAL_GPIO_TogglePin
-../Core/Src/main.c:103:13: warning: unused variable 'number_status4' [-Wunused-variable]
-  103 |         int number_status4 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:102:13: warning: unused variable 'number_status3' [-Wunused-variable]
-  102 |         int number_status3 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:101:13: warning: unused variable 'number_status2' [-Wunused-variable]
-  101 |         int number_status2 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:100:13: warning: unused variable 'number_status1' [-Wunused-variable]
-  100 |         int number_status1 = 0;
-      |             ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
-C:/Users/NguyenTienLuan/Desktop/fukmylife/micro/lab/lab2/Lab2_NTLuan/Debug/../Core/Src/main.c:108: undefined reference to `HAL_GPIO_Toggle'
-C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/NguyenTienLuan/Desktop/fukmylife/micro/lab/lab2/Lab2_NTLuan/Debug/../Core/Src/main.c:109: undefined reference to `HAL_GPIO_Toggle'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:70: Lab2_NTLuan.elf] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:15:34 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:98:9: warning: implicit declaration of function 'setTimer2'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   98 |         setTimer2(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:99:9: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   99 |         setTimer3(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:108:25: warning: implicit declaration of function 'HAL_GPIO_Toogle'; did you mean 'HAL_GPIO_TogglePin'? [-Wimplicit-function-declaration]
-  108 |                         HAL_GPIO_Toogle(LED_RED_GPIO_Port, LED_RED_Pin);
-      |                         ^~~~~~~~~~~~~~~
-      |                         HAL_GPIO_TogglePin
-../Core/Src/main.c:109:25: warning: implicit declaration of function 'HAL_GPIO_Toggle'; did you mean 'HAL_GPIO_TogglePin'? [-Wimplicit-function-declaration]
-  109 |                         HAL_GPIO_Toggle(DOT_GPIO_Port, DOT_Pin);
-      |                         ^~~~~~~~~~~~~~~
-      |                         HAL_GPIO_TogglePin
-../Core/Src/main.c:103:13: warning: unused variable 'number_status4' [-Wunused-variable]
-  103 |         int number_status4 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:102:13: warning: unused variable 'number_status3' [-Wunused-variable]
-  102 |         int number_status3 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:101:13: warning: unused variable 'number_status2' [-Wunused-variable]
-  101 |         int number_status2 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:100:13: warning: unused variable 'number_status1' [-Wunused-variable]
-  100 |         int number_status1 = 0;
-      |             ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
-C:/Users/NguyenTienLuan/Desktop/fukmylife/micro/lab/lab2/Lab2_NTLuan/Debug/../Core/Src/main.c:108: undefined reference to `HAL_GPIO_Toogle'
-C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/NguyenTienLuan/Desktop/fukmylife/micro/lab/lab2/Lab2_NTLuan/Debug/../Core/Src/main.c:109: undefined reference to `HAL_GPIO_Toggle'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:70: Lab2_NTLuan.elf] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:15:51 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:98:9: warning: implicit declaration of function 'setTimer2'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   98 |         setTimer2(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:99:9: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   99 |         setTimer3(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:108:25: warning: implicit declaration of function 'HAL_GPIO_Toggle'; did you mean 'HAL_GPIO_TogglePin'? [-Wimplicit-function-declaration]
-  108 |                         HAL_GPIO_Toggle(LED_RED_GPIO_Port, LED_RED_Pin);
-      |                         ^~~~~~~~~~~~~~~
-      |                         HAL_GPIO_TogglePin
-../Core/Src/main.c:103:13: warning: unused variable 'number_status4' [-Wunused-variable]
-  103 |         int number_status4 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:102:13: warning: unused variable 'number_status3' [-Wunused-variable]
-  102 |         int number_status3 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:101:13: warning: unused variable 'number_status2' [-Wunused-variable]
-  101 |         int number_status2 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:100:13: warning: unused variable 'number_status1' [-Wunused-variable]
-  100 |         int number_status1 = 0;
-      |             ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `main':
-C:/Users/NguyenTienLuan/Desktop/fukmylife/micro/lab/lab2/Lab2_NTLuan/Debug/../Core/Src/main.c:108: undefined reference to `HAL_GPIO_Toggle'
-C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/NguyenTienLuan/Desktop/fukmylife/micro/lab/lab2/Lab2_NTLuan/Debug/../Core/Src/main.c:109: undefined reference to `HAL_GPIO_Toggle'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:70: Lab2_NTLuan.elf] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:19:01 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:98:9: warning: implicit declaration of function 'setTimer2'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   98 |         setTimer2(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:99:9: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   99 |         setTimer3(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:103:13: warning: unused variable 'number_status4' [-Wunused-variable]
-  103 |         int number_status4 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:102:13: warning: unused variable 'number_status3' [-Wunused-variable]
-  102 |         int number_status3 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:101:13: warning: unused variable 'number_status2' [-Wunused-variable]
-  101 |         int number_status2 = 0;
-      |             ^~~~~~~~~~~~~~
-../Core/Src/main.c:100:13: warning: unused variable 'number_status1' [-Wunused-variable]
-  100 |         int number_status1 = 0;
-      |             ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
 arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
    text	   data	    bss	    dec	    hex	filename
-   7248	     20	   1668	   8936	   22e8	Lab2_NTLuan.elf
+   7200	     20	   1652	   8872	   22a8	Lab2_NTLuan.elf
 Finished building: default.size.stdout
  
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-13:23:16 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+15:10:23 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:97:9: warning: implicit declaration of function 'setTimer2'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   97 |         setTimer2(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:98:9: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   98 |         setTimer3(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:109:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  109 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:109:21: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:112:51: error: 'NE2_GPIO_Port' undeclared (first use in this function); did you mean 'EN2_GPIO_Port'?
-  112 |                                 HAL_GPIO_WritePin(NE2_GPIO_Port, NE2_Pin, RESET);
-      |                                                   ^~~~~~~~~~~~~
-      |                                                   EN2_GPIO_Port
-../Core/Src/main.c:112:66: error: 'NE2_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
-  112 |                                 HAL_GPIO_WritePin(NE2_GPIO_Port, NE2_Pin, RESET);
-      |                                                                  ^~~~~~~
-      |                                                                  EN2_Pin
-../Core/Src/main.c:113:51: error: 'NE3_GPIO_Port' undeclared (first use in this function); did you mean 'EN3_GPIO_Port'?
-  113 |                                 HAL_GPIO_WritePin(NE3_GPIO_Port, NE3_Pin, SET);
-      |                                                   ^~~~~~~~~~~~~
-      |                                                   EN3_GPIO_Port
-../Core/Src/main.c:113:66: error: 'NE3_Pin' undeclared (first use in this function); did you mean 'EN3_Pin'?
-  113 |                                 HAL_GPIO_WritePin(NE3_GPIO_Port, NE3_Pin, SET);
-      |                                                                  ^~~~~~~
-      |                                                                  EN3_Pin
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:24:03 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:97:9: warning: implicit declaration of function 'setTimer2'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   97 |         setTimer2(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:98:9: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   98 |         setTimer3(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:109:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  109 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:109:21: note: each undeclared identifier is reported only once for each function it appears in
-../Core/Src/main.c:123:51: error: 'NE2_GPIO_Port' undeclared (first use in this function); did you mean 'EN2_GPIO_Port'?
-  123 |                                 HAL_GPIO_WritePin(NE2_GPIO_Port, NE2_Pin, SET);
-      |                                                   ^~~~~~~~~~~~~
-      |                                                   EN2_GPIO_Port
-../Core/Src/main.c:123:66: error: 'NE2_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
-  123 |                                 HAL_GPIO_WritePin(NE2_GPIO_Port, NE2_Pin, SET);
-      |                                                                  ^~~~~~~
-      |                                                                  EN2_Pin
-../Core/Src/main.c:124:51: error: 'NE3_GPIO_Port' undeclared (first use in this function); did you mean 'EN3_GPIO_Port'?
-  124 |                                 HAL_GPIO_WritePin(NE3_GPIO_Port, NE3_Pin, RESET);
-      |                                                   ^~~~~~~~~~~~~
-      |                                                   EN3_GPIO_Port
-../Core/Src/main.c:124:66: error: 'NE3_Pin' undeclared (first use in this function); did you mean 'EN3_Pin'?
-  124 |                                 HAL_GPIO_WritePin(NE3_GPIO_Port, NE3_Pin, RESET);
-      |                                                                  ^~~~~~~
-      |                                                                  EN3_Pin
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:24:33 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:97:9: warning: implicit declaration of function 'setTimer2'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   97 |         setTimer2(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:98:9: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   98 |         setTimer3(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:109:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  109 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:109:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:25:43 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:97:9: warning: implicit declaration of function 'setTimer2'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   97 |         setTimer2(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:98:9: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
-   98 |         setTimer3(100);
-      |         ^~~~~~~~~
-      |         setTimer1
-../Core/Src/main.c:109:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  109 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:109:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:26:51 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:98:9: warning: implicit declaration of function 'setTimer3'; did you mean 'setTimer2'? [-Wimplicit-function-declaration]
-   98 |         setTimer3(100);
-      |         ^~~~~~~~~
-      |         setTimer2
-../Core/Src/main.c:109:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  109 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:109:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-make: *** Waiting for unfinished jobs....
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:27:23 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:108:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  108 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:108:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:29:47 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
-In file included from ../Core/Src/software_timer.c:8:
-../Core/Inc/software_timer.h:16:1: error: unknown type name 'vodi'; did you mean 'void'?
-   16 | vodi timerRun2();
-      | ^~~~
-      | void
-../Core/Src/software_timer.c:41:6: error: conflicting types for 'timerRun2'; have 'void()'
-   41 | void timerRun2(){
-      |      ^~~~~~~~~
-In file included from ../Core/Src/software_timer.c:8:
-../Core/Inc/software_timer.h:16:6: note: previous declaration of 'timerRun2' with type 'int()'
-   16 | vodi timerRun2();
-      |      ^~~~~~~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/software_timer.o] Error 1
-make: *** Waiting for unfinished jobs....
-In file included from ../Core/Src/main.c:24:
-../Core/Inc/software_timer.h:16:1: error: unknown type name 'vodi'; did you mean 'void'?
-   16 | vodi timerRun2();
-      | ^~~~
-      | void
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:108:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  108 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:108:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:29:57 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
-In file included from ../Core/Src/software_timer.c:8:
-../Core/Inc/software_timer.h:16:1: error: unknown type name 'vodi'; did you mean 'void'?
-   16 | vodi timerRun2();
-      | ^~~~
-      | void
-../Core/Src/software_timer.c:41:6: error: conflicting types for 'timerRun2'; have 'void()'
-   41 | void timerRun2(){
-      |      ^~~~~~~~~
-In file included from ../Core/Src/software_timer.c:8:
-../Core/Inc/software_timer.h:16:6: note: previous declaration of 'timerRun2' with type 'int()'
-   16 | vodi timerRun2();
-      |      ^~~~~~~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/software_timer.o] Error 1
-make: *** Waiting for unfinished jobs....
-In file included from ../Core/Src/main.c:24:
-../Core/Inc/software_timer.h:16:1: error: unknown type name 'vodi'; did you mean 'void'?
-   16 | vodi timerRun2();
-      | ^~~~
-      | void
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:108:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  108 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:108:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:30:15 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:108:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  108 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:108:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:30:19 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:108:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  108 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:108:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:30:22 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:108:21: error: 'timer2_flag' undeclared (first use in this function); did you mean 'timer1_flag'?
-  108 |                 if (timer2_flag == 1) {
-      |                     ^~~~~~~~~~~
-      |                     timer1_flag
-../Core/Src/main.c:108:21: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:30:40 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-   text	   data	    bss	    dec	    hex	filename
-   7392	     20	   1660	   9072	   2370	Lab2_NTLuan.elf
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-13:32:49 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
-../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
-../Core/Src/main.c:267:9: warning: implicit declaration of function 'timerRun1'; did you mean 'timerRun'? [-Wimplicit-function-declaration]
-  267 |         timerRun1();
-      |         ^~~~~~~~~
-      |         timerRun
-../Core/Src/main.c:268:9: warning: implicit declaration of function 'timerRun2'; did you mean 'timerRun'? [-Wimplicit-function-declaration]
-  268 |         timerRun2();
-      |         ^~~~~~~~~
-      |         timerRun
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `HAL_TIM_PeriodElapsedCallback':
-C:/Users/NguyenTienLuan/Desktop/fukmylife/micro/lab/lab2/Lab2_NTLuan/Debug/../Core/Src/main.c:267: undefined reference to `timerRun1'
-C:/ST/STM32CubeIDE_1.14.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/Users/NguyenTienLuan/Desktop/fukmylife/micro/lab/lab2/Lab2_NTLuan/Debug/../Core/Src/main.c:268: undefined reference to `timerRun2'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:70: Lab2_NTLuan.elf] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-13:32:57 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-   text	   data	    bss	    dec	    hex	filename
-   7376	     20	   1660	   9056	   2360	Lab2_NTLuan.elf
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-13:35:54 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-   text	   data	    bss	    dec	    hex	filename
-   7432	     20	   1660	   9112	   2398	Lab2_NTLuan.elf
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-13:37:49 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-   text	   data	    bss	    dec	    hex	filename
-   7384	     20	   1660	   9064	   2368	Lab2_NTLuan.elf
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-13:49:30 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-   text	   data	    bss	    dec	    hex	filename
-   7688	     20	   1660	   9368	   2498	Lab2_NTLuan.elf
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-13:50:24 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-   text	   data	    bss	    dec	    hex	filename
-   7688	     20	   1660	   9368	   2498	Lab2_NTLuan.elf
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-13:51:15 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-   text	   data	    bss	    dec	    hex	filename
-   7688	     20	   1660	   9368	   2498	Lab2_NTLuan.elf
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-13:53:11 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-   text	   data	    bss	    dec	    hex	filename
-   7680	     20	   1660	   9360	   2490	Lab2_NTLuan.elf
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-13:57:45 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:25: warning: implicit declaration of function 'showNumber' [-Wimplicit-function-declaration]
-  110 |                         showNumber(number_status);
+../Core/Src/main.c:108:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  108 |                         update7SEG(index);
       |                         ^~~~~~~~~~
 ../Core/Src/main.c: At top level:
-../Core/Src/main.c:248:6: warning: conflicting types for 'showNumber'; have 'void(int)'
-  248 | void showNumber(int number_status) {
+../Core/Src/main.c:252:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  252 | void update7SEG(int index) {
       |      ^~~~~~~~~~
-../Core/Src/main.c:110:25: note: previous implicit declaration of 'showNumber' with type 'void(int)'
-  110 |                         showNumber(number_status);
+../Core/Src/main.c:108:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  108 |                         update7SEG(index);
       |                         ^~~~~~~~~~
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-   text	   data	    bss	    dec	    hex	filename
-   7708	     20	   1660	   9388	   24ac	Lab2_NTLuan.elf
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-13:58:57 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-   text	   data	    bss	    dec	    hex	filename
-   7680	     20	   1660	   9360	   2490	Lab2_NTLuan.elf
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
-14:07:29 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
-  110 |                         update7SEG(number_status);
-      |                         ^~~~~~~~~~
-../Core/Src/main.c: At top level:
-../Core/Src/main.c:249:1: error: two or more data types in declaration specifiers
-  249 | void update7SEG(int number_status) {
-      | ^~~~
 ../Core/Src/main.c: In function 'update7SEG':
-../Core/Src/main.c:308:1: warning: control reaches end of non-void function [-Wreturn-type]
-  308 | }
-      | ^
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-14:10:50 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
-  110 |                         update7SEG(number_status);
-      |                         ^~~~~~~~~~
+../Core/Src/main.c:255:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  255 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:256:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  256 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
 ../Core/Src/main.c: At top level:
-../Core/Src/main.c:247:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
-  247 | void update7SEG(int number_status) {
+../Core/Src/main.c:275:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  275 | void displayLED(int index) {
       |      ^~~~~~~~~~
-../Core/Src/main.c:110:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
-  110 |                         update7SEG(number_status);
-      |                         ^~~~~~~~~~
+../Core/Src/main.c:255:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  255 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:300:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  300 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:256:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  256 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
 arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Lab2_NTLuan.elf
  
 arm-none-eabi-size  Lab2_NTLuan.elf 
 arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-   text	   data	    bss	    dec	    hex	filename
-   7708	     20	   1660	   9388	   24ac	Lab2_NTLuan.elf
 arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-Finished building: default.size.stdout
 arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8312	     36	   1660	  10008	   2718	Lab2_NTLuan.elf
+Finished building: default.size.stdout
  
-Finished building: Lab2_NTLuan.hex
 Finished building: Lab2_NTLuan.list
- 
- 
+Finished building: Lab2_NTLuan.hex
 Finished building: Lab2_NTLuan.bin
  
-14:11:32 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+ 
+ 
+15:13:13 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:109:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
-  109 |                         update7SEG(number_status);
+../Core/Src/main.c:108:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  108 |                         update7SEG(index);
       |                         ^~~~~~~~~~
-../Core/Src/main.c:109:36: error: 'number_status' undeclared (first use in this function)
-  109 |                         update7SEG(number_status);
-      |                                    ^~~~~~~~~~~~~
-../Core/Src/main.c:109:36: note: each undeclared identifier is reported only once for each function it appears in
 ../Core/Src/main.c: At top level:
-../Core/Src/main.c:247:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
-  247 | void update7SEG(int number_status) {
+../Core/Src/main.c:252:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  252 | void update7SEG(int index) {
       |      ^~~~~~~~~~
-../Core/Src/main.c:109:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
-  109 |                         update7SEG(number_status);
+../Core/Src/main.c:108:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  108 |                         update7SEG(index);
       |                         ^~~~~~~~~~
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-14:15:02 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
-../Core/Src/main.c:245:9: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
-  245 |         update7SEG(number_status);
-      |         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:255:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  255 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:256:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  256 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
 ../Core/Src/main.c: At top level:
-../Core/Src/main.c:248:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
-  248 | void update7SEG(int number_status) {
+../Core/Src/main.c:275:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  275 | void displayLED(int index) {
       |      ^~~~~~~~~~
-../Core/Src/main.c:245:9: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
-  245 |         update7SEG(number_status);
-      |         ^~~~~~~~~~
+../Core/Src/main.c:255:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  255 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:304:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  304 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:256:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  256 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
 arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Lab2_NTLuan.elf
  
 arm-none-eabi-size  Lab2_NTLuan.elf 
 arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-   text	   data	    bss	    dec	    hex	filename
-   7692	     20	   1660	   9372	   249c	Lab2_NTLuan.elf
 arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
 arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+   text	   data	    bss	    dec	    hex	filename
+   8340	     36	   1660	  10036	   2734	Lab2_NTLuan.elf
 Finished building: default.size.stdout
  
 Finished building: Lab2_NTLuan.hex
@@ -1059,13 +408,105 @@ Finished building: Lab2_NTLuan.bin
  
  
  
-14:27:29 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+15:13:48 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'display7SEG':
-../Core/Src/main.c:308:17: error: 'index' undeclared (first use in this function)
-  308 |         switch (index) {
-      |                 ^~~~~
-../Core/Src/main.c:308:17: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  108 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:252:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  252 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:108:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  108 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:255:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  255 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:256:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  256 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:275:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  275 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:255:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  255 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:304:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  304 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:256:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  256 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8340	     36	   1660	  10036	   2734	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+15:14:10 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:108:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  108 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:252:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  252 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:108:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  108 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:255:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  255 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:256:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  256 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:275:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  275 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:255:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  255 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:304:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  304 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:256:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  256 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8340	     36	   1660	  10036	   2734	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 

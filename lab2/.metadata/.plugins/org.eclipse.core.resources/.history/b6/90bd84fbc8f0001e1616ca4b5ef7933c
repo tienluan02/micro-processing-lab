@@ -94,7 +94,7 @@ int main(void) {
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	setTimer1(100);
-	setTimer2(100);
+	setTimer2(10);
 	int index = 0;
 	while (1) {
 		/* USER CODE END WHILE */
@@ -110,7 +110,7 @@ int main(void) {
 			if (index == 4) {
 				index = 0;
 			}
-			setTimer2(100);
+			setTimer2(10);
 		}
 //
 //		if (timer3_flag == 1) {
