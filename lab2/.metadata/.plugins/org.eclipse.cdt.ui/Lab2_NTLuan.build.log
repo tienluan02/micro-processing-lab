@@ -1,4 +1,4 @@
-15:14:10 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+15:23:10 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
@@ -38,17 +38,17 @@ Finished building target: Lab2_NTLuan.elf
 arm-none-eabi-size  Lab2_NTLuan.elf 
 arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
 arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
    text	   data	    bss	    dec	    hex	filename
    8340	     36	   1660	  10036	   2734	Lab2_NTLuan.elf
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
 Finished building: default.size.stdout
  
-Finished building: Lab2_NTLuan.list
 Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.list
 Finished building: Lab2_NTLuan.bin
  
  
  
 
-15:14:11 Build Finished. 0 errors, 6 warnings. (took 823ms)
+15:23:11 Build Finished. 0 errors, 6 warnings. (took 825ms)
 
