@@ -1,23 +1,13 @@
-13:58:57 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+14:27:29 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Lab2_NTLuan.elf
- 
-arm-none-eabi-size  Lab2_NTLuan.elf 
-arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
-arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
-   text	   data	    bss	    dec	    hex	filename
-   7680	     20	   1660	   9360	   2490	Lab2_NTLuan.elf
-arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
-Finished building: default.size.stdout
- 
-Finished building: Lab2_NTLuan.hex
-Finished building: Lab2_NTLuan.list
-Finished building: Lab2_NTLuan.bin
- 
- 
- 
+../Core/Src/main.c: In function 'display7SEG':
+../Core/Src/main.c:308:17: error: 'index' undeclared (first use in this function)
+  308 |         switch (index) {
+      |                 ^~~~~
+../Core/Src/main.c:308:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
 
-13:58:58 Build Finished. 0 errors, 0 warnings. (took 720ms)
+14:27:30 Build Failed. 2 errors, 0 warnings. (took 317ms)
 

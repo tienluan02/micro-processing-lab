@@ -960,3 +960,112 @@ Finished building: Lab2_NTLuan.bin
  
  
  
+14:07:29 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  110 |                         update7SEG(number_status);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:249:1: error: two or more data types in declaration specifiers
+  249 | void update7SEG(int number_status) {
+      | ^~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:308:1: warning: control reaches end of non-void function [-Wreturn-type]
+  308 | }
+      | ^
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:10:50 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  110 |                         update7SEG(number_status);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:247:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  247 | void update7SEG(int number_status) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  110 |                         update7SEG(number_status);
+      |                         ^~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+   text	   data	    bss	    dec	    hex	filename
+   7708	     20	   1660	   9388	   24ac	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+ 
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.list
+ 
+ 
+Finished building: Lab2_NTLuan.bin
+ 
+14:11:32 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  109 |                         update7SEG(number_status);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:109:36: error: 'number_status' undeclared (first use in this function)
+  109 |                         update7SEG(number_status);
+      |                                    ^~~~~~~~~~~~~
+../Core/Src/main.c:109:36: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:247:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  247 | void update7SEG(int number_status) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  109 |                         update7SEG(number_status);
+      |                         ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:15:02 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:245:9: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  245 |         update7SEG(number_status);
+      |         ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:248:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  248 | void update7SEG(int number_status) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:245:9: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  245 |         update7SEG(number_status);
+      |         ^~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+   text	   data	    bss	    dec	    hex	filename
+   7692	     20	   1660	   9372	   249c	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+14:27:29 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'display7SEG':
+../Core/Src/main.c:308:17: error: 'index' undeclared (first use in this function)
+  308 |         switch (index) {
+      |                 ^~~~~
+../Core/Src/main.c:308:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
