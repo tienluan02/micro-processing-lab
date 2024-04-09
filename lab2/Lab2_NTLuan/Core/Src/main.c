@@ -106,8 +106,8 @@ int main(void) {
 		}
 
 		if (timer2_flag == 1) {
-			updateClockBuffer();
 			update7SEG(index);
+			updateClockBuffer(hour, minute);
 			index++;
 			if (index == 4) {
 				index = 0;
@@ -129,6 +129,7 @@ int main(void) {
 			if (hour >= 24) {
 				hour = 0;
 			}
+			updateClockBuffer(hour, minute);
 			setTimer3(100);
 		}
 		/* USER CODE BEGIN 3 */
@@ -409,7 +410,7 @@ void display7SEG(int number_status) {
 	}
 }
 
-void updateClockBuffer() {
+void updateClockBuffer(int hour,int minute) {
 	led_buffer[0] = hour / 10;  // Tens digit of hour
 	led_buffer[1] = hour % 10;  // Ones digit of hour
 	led_buffer[2] = minute / 10;  // Tens digit of minute
