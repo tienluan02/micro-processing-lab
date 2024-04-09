@@ -561,3 +561,1415 @@ Finished building: Lab2_NTLuan.bin
  
  
  
+15:42:43 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  109 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:130:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  130 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:270:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:289:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  289 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  109 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:318:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  318 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:270:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  413 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:130:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  130 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'updateClockBuffer':
+../Core/Src/main.c:414:25: error: 'hour' undeclared (first use in this function)
+  414 |         led_buffer[0] = hour/10;
+      |                         ^~~~
+../Core/Src/main.c:414:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:416:25: error: 'minute' undeclared (first use in this function)
+  416 |         led_buffer[2] = minute/10;
+      |                         ^~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:43:25 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  109 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:130:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  130 |                         updateClockBuffer(hour, minute);
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:270:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:289:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  289 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  109 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:318:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  318 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:270:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  413 | void updateClockBuffer(hour, minute) {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:130:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  130 |                         updateClockBuffer(hour, minute);
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'updateClockBuffer':
+../Core/Src/main.c:413:6: warning: type of 'hour' defaults to 'int' [-Wimplicit-int]
+  413 | void updateClockBuffer(hour, minute) {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: type of 'minute' defaults to 'int' [-Wimplicit-int]
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7708	     20	   1684	   9412	   24c4	Lab2_NTLuan.elf
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+Finished building: Lab2_NTLuan.list
+ 
+ 
+ 
+15:45:13 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  110 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:131:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  131 |                         updateClockBuffer(hour, minute);
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:270:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:289:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  289 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  110 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:318:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  318 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:270:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  413 | void updateClockBuffer(hour, minute) {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:131:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  131 |                         updateClockBuffer(hour, minute);
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'updateClockBuffer':
+../Core/Src/main.c:413:6: warning: type of 'hour' defaults to 'int' [-Wimplicit-int]
+  413 | void updateClockBuffer(hour, minute) {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: type of 'minute' defaults to 'int' [-Wimplicit-int]
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7712	     20	   1684	   9416	   24c8	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:21:36 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  109 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:118:25: error: 'second' undeclared (first use in this function)
+  118 |                         second++;
+      |                         ^~~~~~
+../Core/Src/main.c:118:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:121:33: error: 'minute' undeclared (first use in this function)
+  121 |                                 minute++;
+      |                                 ^~~~~~
+../Core/Src/main.c:125:33: error: 'hour' undeclared (first use in this function)
+  125 |                                 hour++;
+      |                                 ^~~~
+../Core/Src/main.c:130:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  130 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  109 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:130:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  130 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:23:43 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  109 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:130:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  130 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  109 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:130:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  130 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+   text	   data	    bss	    dec	    hex	filename
+   7740	     32	   1680	   9452	   24ec	Lab2_NTLuan.elf
+Finished building: default.size.stdout
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+ 
+22:26:17 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  110 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:131:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  131 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  110 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:131:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  131 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7740	     32	   1680	   9452	   24ec	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:26:23 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  110 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:131:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  131 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  110 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:131:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  131 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7740	     32	   1680	   9452	   24ec	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+ 
+ 
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+22:32:40 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  110 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:111:25: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  111 |                         display7SEG(led_buffer[index]);
+      |                         ^~~~~~~~~~~
+../Core/Src/main.c:132:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  132 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:289:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  289 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  110 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:318:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  318 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:111:25: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  111 |                         display7SEG(led_buffer[index]);
+      |                         ^~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  413 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:132:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  132 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8556	     32	   1680	  10268	   281c	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+ 
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:32:44 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8556	     32	   1680	  10268	   281c	Lab2_NTLuan.elf
+Finished building: default.size.stdout
+ 
+22:32:47 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8556	     32	   1680	  10268	   281c	Lab2_NTLuan.elf
+Finished building: default.size.stdout
+ 
+22:34:20 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  110 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:111:25: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  111 |                         display7SEG(led_buffer[index]);
+      |                         ^~~~~~~~~~~
+../Core/Src/main.c:132:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  132 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:289:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  289 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  110 |                         displayLED(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:318:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  318 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:111:25: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  111 |                         display7SEG(led_buffer[index]);
+      |                         ^~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  413 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:132:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  132 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8556	     32	   1680	  10268	   281c	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:35:23 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:131:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  131 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:265:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  265 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:268:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:268:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:131:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  131 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8660	     32	   1680	  10372	   2884	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:36:45 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:111:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  111 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:266:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  266 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  269 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:270:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:289:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  289 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  269 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:318:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  318 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:270:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  413 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:111:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  111 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8664	     32	   1680	  10376	   2888	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:41:16 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:111:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  111 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:120:25: error: 'second' undeclared (first use in this function)
+  120 |                         second++;
+      |                         ^~~~~~
+../Core/Src/main.c:120:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:123:33: error: 'minute' undeclared (first use in this function)
+  123 |                                 minute++;
+      |                                 ^~~~~~
+../Core/Src/main.c:127:33: error: 'hour' undeclared (first use in this function)
+  127 |                                 hour++;
+      |                                 ^~~~
+../Core/Src/main.c:100:13: warning: unused variable 'led_buffer' [-Wunused-variable]
+  100 |         int led_buffer[4];
+      |             ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:266:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  266 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  269 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:270:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:270:29: error: 'led_buffer' undeclared (first use in this function)
+  270 |                 display7SEG(led_buffer[0]);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:289:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  289 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  269 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:318:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  318 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:270:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  413 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:111:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  111 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'updateClockBuffer':
+../Core/Src/main.c:414:9: error: 'led_buffer' undeclared (first use in this function)
+  414 |         led_buffer[0] = hour / 10;  // Tens digit of hour
+      |         ^~~~~~~~~~
+../Core/Src/main.c:414:25: error: 'hour' undeclared (first use in this function)
+  414 |         led_buffer[0] = hour / 10;  // Tens digit of hour
+      |                         ^~~~
+../Core/Src/main.c:416:25: error: 'minute' undeclared (first use in this function)
+  416 |         led_buffer[2] = minute / 10;  // Tens digit of minute
+      |                         ^~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:41:49 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:111:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  111 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:100:13: warning: unused variable 'led_buffer' [-Wunused-variable]
+  100 |         int led_buffer[4];
+      |             ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:266:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  266 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  269 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:270:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:270:29: error: 'led_buffer' undeclared (first use in this function)
+  270 |                 display7SEG(led_buffer[0]);
+      |                             ^~~~~~~~~~
+../Core/Src/main.c:270:29: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:289:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  289 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  269 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:318:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  318 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:270:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  413 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:111:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  111 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'updateClockBuffer':
+../Core/Src/main.c:414:9: error: 'led_buffer' undeclared (first use in this function)
+  414 |         led_buffer[0] = hour / 10;  // Tens digit of hour
+      |         ^~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:42:12 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  109 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  110 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:265:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  265 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  109 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:268:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:268:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  110 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8664	     32	   1680	  10376	   2888	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:43:18 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  109 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  110 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:265:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  265 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  109 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:268:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:268:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  110 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8664	     32	   1680	  10376	   2888	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:52:03 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  109 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  110 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:265:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  265 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  109 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:268:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:268:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  110 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8664	     32	   1680	  10376	   2888	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:53:17 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  109 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c:130:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  130 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:264:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  264 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  109 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:267:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  267 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:268:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  268 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:287:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  287 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:267:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  267 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:316:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  316 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:268:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  268 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:411:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  411 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:130:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  130 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8660	     32	   1680	  10372	   2884	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:55:13 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:122:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  122 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:123:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  123 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:265:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  265 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:123:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  123 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:268:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:268:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:122:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  122 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8644	     32	   1680	  10356	   2874	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:56:55 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  109 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:266:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  266 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  269 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:270:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:289:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  289 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  269 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:318:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  318 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:270:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  270 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:413:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  413 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  109 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8664	     32	   1680	  10376	   2888	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+22:57:36 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  109 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:265:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  265 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:268:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:268:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  109 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8660	     32	   1680	  10372	   2884	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+Finished building: Lab2_NTLuan.list
+Finished building: Lab2_NTLuan.hex
+ 
+Finished building: Lab2_NTLuan.bin
+ 
+ 
+ 
+08:52:40 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:3: warning: implicit declaration of function 'setTimer0'; did you mean 'setTimer3'? [-Wimplicit-function-declaration]
+  103 |   setTimer0(10);
+      |   ^~~~~~~~~
+      |   setTimer3
+../Core/Src/main.c:109:15: warning: implicit declaration of function 'getTimer0Flag' [-Wimplicit-function-declaration]
+  109 |           if (getTimer0Flag())
+      |               ^~~~~~~~~~~~~
+../Core/Src/main.c:116:15: warning: implicit declaration of function 'getTimer1Flag'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
+  116 |           if (getTimer1Flag())
+      |               ^~~~~~~~~~~~~
+      |               setTimer1
+../Core/Src/main.c:127:15: warning: implicit declaration of function 'getTimer2Flag'; did you mean 'setTimer2'? [-Wimplicit-function-declaration]
+  127 |           if (getTimer2Flag())
+      |               ^~~~~~~~~~~~~
+      |               setTimer2
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:235:28: error: 'ENM0_Pin' undeclared (first use in this function); did you mean 'EN0_Pin'?
+  235 |   HAL_GPIO_WritePin(GPIOA, ENM0_Pin|ENM1_Pin|ENM2_Pin|DOT_Pin
+      |                            ^~~~~~~~
+      |                            EN0_Pin
+../Core/Src/main.c:235:28: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:235:37: error: 'ENM1_Pin' undeclared (first use in this function); did you mean 'EN1_Pin'?
+  235 |   HAL_GPIO_WritePin(GPIOA, ENM0_Pin|ENM1_Pin|ENM2_Pin|DOT_Pin
+      |                                     ^~~~~~~~
+      |                                     EN1_Pin
+../Core/Src/main.c:235:46: error: 'ENM2_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  235 |   HAL_GPIO_WritePin(GPIOA, ENM0_Pin|ENM1_Pin|ENM2_Pin|DOT_Pin
+      |                                              ^~~~~~~~
+      |                                              EN2_Pin
+../Core/Src/main.c:237:36: error: 'EN4_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  237 |                           |EN3_Pin|EN4_Pin|EN5_Pin|ENM3_Pin
+      |                                    ^~~~~~~
+      |                                    EN2_Pin
+../Core/Src/main.c:237:44: error: 'EN5_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  237 |                           |EN3_Pin|EN4_Pin|EN5_Pin|ENM3_Pin
+      |                                            ^~~~~~~
+      |                                            EN2_Pin
+../Core/Src/main.c:237:52: error: 'ENM3_Pin' undeclared (first use in this function); did you mean 'EN3_Pin'?
+  237 |                           |EN3_Pin|EN4_Pin|EN5_Pin|ENM3_Pin
+      |                                                    ^~~~~~~~
+      |                                                    EN3_Pin
+../Core/Src/main.c:238:28: error: 'ENM4_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  238 |                           |ENM4_Pin|ENM5_Pin|ENM6_Pin, GPIO_PIN_RESET);
+      |                            ^~~~~~~~
+      |                            EN2_Pin
+../Core/Src/main.c:238:37: error: 'ENM5_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  238 |                           |ENM4_Pin|ENM5_Pin|ENM6_Pin, GPIO_PIN_RESET);
+      |                                     ^~~~~~~~
+      |                                     EN2_Pin
+../Core/Src/main.c:238:46: error: 'ENM6_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  238 |                           |ENM4_Pin|ENM5_Pin|ENM6_Pin, GPIO_PIN_RESET);
+      |                                              ^~~~~~~~
+      |                                              EN2_Pin
+../Core/Src/main.c:241:55: error: 'ROW2_Pin' undeclared (first use in this function)
+  241 |   HAL_GPIO_WritePin(GPIOB, SEG0_Pin|SEG1_Pin|SEG2_Pin|ROW2_Pin
+      |                                                       ^~~~~~~~
+../Core/Src/main.c:242:28: error: 'ROW3_Pin' undeclared (first use in this function)
+  242 |                           |ROW3_Pin|ROW4_Pin|ROW5_Pin|ROW6_Pin
+      |                            ^~~~~~~~
+../Core/Src/main.c:242:37: error: 'ROW4_Pin' undeclared (first use in this function)
+  242 |                           |ROW3_Pin|ROW4_Pin|ROW5_Pin|ROW6_Pin
+      |                                     ^~~~~~~~
+../Core/Src/main.c:242:46: error: 'ROW5_Pin' undeclared (first use in this function)
+  242 |                           |ROW3_Pin|ROW4_Pin|ROW5_Pin|ROW6_Pin
+      |                                              ^~~~~~~~
+../Core/Src/main.c:242:55: error: 'ROW6_Pin' undeclared (first use in this function)
+  242 |                           |ROW3_Pin|ROW4_Pin|ROW5_Pin|ROW6_Pin
+      |                                                       ^~~~~~~~
+../Core/Src/main.c:243:28: error: 'ROW7_Pin' undeclared (first use in this function)
+  243 |                           |ROW7_Pin|SEG3_Pin|SEG4_Pin|SEG5_Pin
+      |                            ^~~~~~~~
+../Core/Src/main.c:244:37: error: 'ENM7_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  244 |                           |SEG6_Pin|ENM7_Pin|ROW0_Pin|ROW1_Pin, GPIO_PIN_RESET);
+      |                                     ^~~~~~~~
+      |                                     EN2_Pin
+../Core/Src/main.c:244:46: error: 'ROW0_Pin' undeclared (first use in this function)
+  244 |                           |SEG6_Pin|ENM7_Pin|ROW0_Pin|ROW1_Pin, GPIO_PIN_RESET);
+      |                                              ^~~~~~~~
+../Core/Src/main.c:244:55: error: 'ROW1_Pin' undeclared (first use in this function)
+  244 |                           |SEG6_Pin|ENM7_Pin|ROW0_Pin|ROW1_Pin, GPIO_PIN_RESET);
+      |                                                       ^~~~~~~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:277:9: warning: implicit declaration of function 'timer_run'; did you mean 'timerRun'? [-Wimplicit-function-declaration]
+  277 |         timer_run();
+      |         ^~~~~~~~~
+      |         timerRun
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:384:31: error: 'EN5_GPIO_Port' undeclared (first use in this function); did you mean 'EN0_GPIO_Port'?
+  384 |             HAL_GPIO_WritePin(EN5_GPIO_Port, EN5_Pin, GPIO_PIN_SET);
+      |                               ^~~~~~~~~~~~~
+      |                               EN0_GPIO_Port
+../Core/Src/main.c:384:46: error: 'EN5_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  384 |             HAL_GPIO_WritePin(EN5_GPIO_Port, EN5_Pin, GPIO_PIN_SET);
+      |                                              ^~~~~~~
+      |                                              EN2_Pin
+../Core/Src/main.c:385:31: error: 'EN4_GPIO_Port' undeclared (first use in this function); did you mean 'EN0_GPIO_Port'?
+  385 |             HAL_GPIO_WritePin(EN4_GPIO_Port, EN4_Pin, GPIO_PIN_SET);
+      |                               ^~~~~~~~~~~~~
+      |                               EN0_GPIO_Port
+../Core/Src/main.c:385:46: error: 'EN4_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  385 |             HAL_GPIO_WritePin(EN4_GPIO_Port, EN4_Pin, GPIO_PIN_SET);
+      |                                              ^~~~~~~
+      |                                              EN2_Pin
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:52:49 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:3: warning: implicit declaration of function 'setTimer0'; did you mean 'setTimer3'? [-Wimplicit-function-declaration]
+  103 |   setTimer0(10);
+      |   ^~~~~~~~~
+      |   setTimer3
+../Core/Src/main.c:109:15: warning: implicit declaration of function 'getTimer0Flag' [-Wimplicit-function-declaration]
+  109 |           if (getTimer0Flag())
+      |               ^~~~~~~~~~~~~
+../Core/Src/main.c:116:15: warning: implicit declaration of function 'getTimer1Flag'; did you mean 'setTimer1'? [-Wimplicit-function-declaration]
+  116 |           if (getTimer1Flag())
+      |               ^~~~~~~~~~~~~
+      |               setTimer1
+../Core/Src/main.c:127:15: warning: implicit declaration of function 'getTimer2Flag'; did you mean 'setTimer2'? [-Wimplicit-function-declaration]
+  127 |           if (getTimer2Flag())
+      |               ^~~~~~~~~~~~~
+      |               setTimer2
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:235:28: error: 'ENM0_Pin' undeclared (first use in this function); did you mean 'EN0_Pin'?
+  235 |   HAL_GPIO_WritePin(GPIOA, ENM0_Pin|ENM1_Pin|ENM2_Pin|DOT_Pin
+      |                            ^~~~~~~~
+      |                            EN0_Pin
+../Core/Src/main.c:235:28: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:235:37: error: 'ENM1_Pin' undeclared (first use in this function); did you mean 'EN1_Pin'?
+  235 |   HAL_GPIO_WritePin(GPIOA, ENM0_Pin|ENM1_Pin|ENM2_Pin|DOT_Pin
+      |                                     ^~~~~~~~
+      |                                     EN1_Pin
+../Core/Src/main.c:235:46: error: 'ENM2_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  235 |   HAL_GPIO_WritePin(GPIOA, ENM0_Pin|ENM1_Pin|ENM2_Pin|DOT_Pin
+      |                                              ^~~~~~~~
+      |                                              EN2_Pin
+../Core/Src/main.c:237:36: error: 'EN4_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  237 |                           |EN3_Pin|EN4_Pin|EN5_Pin|ENM3_Pin
+      |                                    ^~~~~~~
+      |                                    EN2_Pin
+../Core/Src/main.c:237:44: error: 'EN5_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  237 |                           |EN3_Pin|EN4_Pin|EN5_Pin|ENM3_Pin
+      |                                            ^~~~~~~
+      |                                            EN2_Pin
+../Core/Src/main.c:237:52: error: 'ENM3_Pin' undeclared (first use in this function); did you mean 'EN3_Pin'?
+  237 |                           |EN3_Pin|EN4_Pin|EN5_Pin|ENM3_Pin
+      |                                                    ^~~~~~~~
+      |                                                    EN3_Pin
+../Core/Src/main.c:238:28: error: 'ENM4_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  238 |                           |ENM4_Pin|ENM5_Pin|ENM6_Pin, GPIO_PIN_RESET);
+      |                            ^~~~~~~~
+      |                            EN2_Pin
+../Core/Src/main.c:238:37: error: 'ENM5_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  238 |                           |ENM4_Pin|ENM5_Pin|ENM6_Pin, GPIO_PIN_RESET);
+      |                                     ^~~~~~~~
+      |                                     EN2_Pin
+../Core/Src/main.c:238:46: error: 'ENM6_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  238 |                           |ENM4_Pin|ENM5_Pin|ENM6_Pin, GPIO_PIN_RESET);
+      |                                              ^~~~~~~~
+      |                                              EN2_Pin
+../Core/Src/main.c:241:55: error: 'ROW2_Pin' undeclared (first use in this function)
+  241 |   HAL_GPIO_WritePin(GPIOB, SEG0_Pin|SEG1_Pin|SEG2_Pin|ROW2_Pin
+      |                                                       ^~~~~~~~
+../Core/Src/main.c:242:28: error: 'ROW3_Pin' undeclared (first use in this function)
+  242 |                           |ROW3_Pin|ROW4_Pin|ROW5_Pin|ROW6_Pin
+      |                            ^~~~~~~~
+../Core/Src/main.c:242:37: error: 'ROW4_Pin' undeclared (first use in this function)
+  242 |                           |ROW3_Pin|ROW4_Pin|ROW5_Pin|ROW6_Pin
+      |                                     ^~~~~~~~
+../Core/Src/main.c:242:46: error: 'ROW5_Pin' undeclared (first use in this function)
+  242 |                           |ROW3_Pin|ROW4_Pin|ROW5_Pin|ROW6_Pin
+      |                                              ^~~~~~~~
+../Core/Src/main.c:242:55: error: 'ROW6_Pin' undeclared (first use in this function)
+  242 |                           |ROW3_Pin|ROW4_Pin|ROW5_Pin|ROW6_Pin
+      |                                                       ^~~~~~~~
+../Core/Src/main.c:243:28: error: 'ROW7_Pin' undeclared (first use in this function)
+  243 |                           |ROW7_Pin|SEG3_Pin|SEG4_Pin|SEG5_Pin
+      |                            ^~~~~~~~
+../Core/Src/main.c:244:37: error: 'ENM7_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  244 |                           |SEG6_Pin|ENM7_Pin|ROW0_Pin|ROW1_Pin, GPIO_PIN_RESET);
+      |                                     ^~~~~~~~
+      |                                     EN2_Pin
+../Core/Src/main.c:244:46: error: 'ROW0_Pin' undeclared (first use in this function)
+  244 |                           |SEG6_Pin|ENM7_Pin|ROW0_Pin|ROW1_Pin, GPIO_PIN_RESET);
+      |                                              ^~~~~~~~
+../Core/Src/main.c:244:55: error: 'ROW1_Pin' undeclared (first use in this function)
+  244 |                           |SEG6_Pin|ENM7_Pin|ROW0_Pin|ROW1_Pin, GPIO_PIN_RESET);
+      |                                                       ^~~~~~~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:277:9: warning: implicit declaration of function 'timer_run'; did you mean 'timerRun'? [-Wimplicit-function-declaration]
+  277 |         timer_run();
+      |         ^~~~~~~~~
+      |         timerRun
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:384:31: error: 'EN5_GPIO_Port' undeclared (first use in this function); did you mean 'EN0_GPIO_Port'?
+  384 |             HAL_GPIO_WritePin(EN5_GPIO_Port, EN5_Pin, GPIO_PIN_SET);
+      |                               ^~~~~~~~~~~~~
+      |                               EN0_GPIO_Port
+../Core/Src/main.c:384:46: error: 'EN5_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  384 |             HAL_GPIO_WritePin(EN5_GPIO_Port, EN5_Pin, GPIO_PIN_SET);
+      |                                              ^~~~~~~
+      |                                              EN2_Pin
+../Core/Src/main.c:385:31: error: 'EN4_GPIO_Port' undeclared (first use in this function); did you mean 'EN0_GPIO_Port'?
+  385 |             HAL_GPIO_WritePin(EN4_GPIO_Port, EN4_Pin, GPIO_PIN_SET);
+      |                               ^~~~~~~~~~~~~
+      |                               EN0_GPIO_Port
+../Core/Src/main.c:385:46: error: 'EN4_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+  385 |             HAL_GPIO_WritePin(EN4_GPIO_Port, EN4_Pin, GPIO_PIN_SET);
+      |                                              ^~~~~~~
+      |                                              EN2_Pin
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+08:52:53 **** Incremental Build of configuration Debug for project Lab2_NTLuan ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:25: warning: implicit declaration of function 'updateClockBuffer' [-Wimplicit-function-declaration]
+  109 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:110:25: warning: implicit declaration of function 'update7SEG' [-Wimplicit-function-declaration]
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:265:6: warning: conflicting types for 'update7SEG'; have 'void(int)'
+  265 | void update7SEG(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:110:25: note: previous implicit declaration of 'update7SEG' with type 'void(int)'
+  110 |                         update7SEG(index);
+      |                         ^~~~~~~~~~
+../Core/Src/main.c: In function 'update7SEG':
+../Core/Src/main.c:268:17: warning: implicit declaration of function 'displayLED' [-Wimplicit-function-declaration]
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:269:17: warning: implicit declaration of function 'display7SEG' [-Wimplicit-function-declaration]
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:288:6: warning: conflicting types for 'displayLED'; have 'void(int)'
+  288 | void displayLED(int index) {
+      |      ^~~~~~~~~~
+../Core/Src/main.c:268:17: note: previous implicit declaration of 'displayLED' with type 'void(int)'
+  268 |                 displayLED(index);
+      |                 ^~~~~~~~~~
+../Core/Src/main.c:317:6: warning: conflicting types for 'display7SEG'; have 'void(int)'
+  317 | void display7SEG(int number_status) {
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:269:17: note: previous implicit declaration of 'display7SEG' with type 'void(int)'
+  269 |                 display7SEG(led_buffer[0]);
+      |                 ^~~~~~~~~~~
+../Core/Src/main.c:412:6: warning: conflicting types for 'updateClockBuffer'; have 'void()'
+  412 | void updateClockBuffer() {
+      |      ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:109:25: note: previous implicit declaration of 'updateClockBuffer' with type 'void()'
+  109 |                         updateClockBuffer();
+      |                         ^~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "Lab2_NTLuan.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\NguyenTienLuan\Desktop\fukmylife\micro\lab\lab2\Lab2_NTLuan\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab2_NTLuan.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab2_NTLuan.elf
+ 
+arm-none-eabi-size  Lab2_NTLuan.elf 
+arm-none-eabi-objdump -h -S Lab2_NTLuan.elf  > "Lab2_NTLuan.list"
+arm-none-eabi-objcopy  -O ihex Lab2_NTLuan.elf  "Lab2_NTLuan.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8660	     32	   1680	  10372	   2884	Lab2_NTLuan.elf
+arm-none-eabi-objcopy  -O binary Lab2_NTLuan.elf  "Lab2_NTLuan.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Lab2_NTLuan.list
+ 
+Finished building: Lab2_NTLuan.hex
+Finished building: Lab2_NTLuan.bin
+ 
+ 
