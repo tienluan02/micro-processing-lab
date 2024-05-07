@@ -114,3 +114,10 @@ Finished building: Lab3_NTLuan.hex
 Finished building: Lab3_NTLuan.list
  
  
+11:42:19 **** Incremental Build of configuration Debug for project Lab3_NTLuan ****
+make -j8 all 
+arm-none-eabi-size  Lab3_NTLuan.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12972	    108	   1716	  14796	   39cc	Lab3_NTLuan.elf
+Finished building: default.size.stdout
+ 
