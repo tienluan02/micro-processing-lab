@@ -1,0 +1,10 @@
+../Core/Src/control_led.c:13:6:red_green	8	static
+../Core/Src/control_led.c:22:6:red_yellow	8	static
+../Core/Src/control_led.c:31:6:green_red	8	static
+../Core/Src/control_led.c:40:6:yellow_red	8	static
+../Core/Src/control_led.c:49:6:green_green	8	static
+../Core/Src/control_led.c:59:6:red_red	8	static
+../Core/Src/control_led.c:69:6:yellow_yellow	8	static
+../Core/Src/control_led.c:79:6:update7SEG	8	static
+../Core/Src/control_led.c:116:6:update7SEG_2	16	static
+../Core/Src/control_led.c:153:6:display7SEG	16	static
