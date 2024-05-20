@@ -1,0 +1,94 @@
+/* global.h */
+#ifndef GLOBAL_H
+#define GLOBAL_H
+
+#define SCH_MAX_TASKS 5 // Adjust as necessary
+
+typedef struct {
+  void (*pTask)(void); // Pointer to the task
+  uint32_t Delay;      // Delay (ticks) until the function will (next) be run
+  uint32_t Period;     // Interval (ticks) between subsequent runs
+  uint8_t RunMe;       // Incremented (by scheduler) when task is due to execute
+} sTask;
+
+void SCH_Init(void);
+void SCH_Update(void);
+void SCH_Dispatch_Tasks(void);
+uint8_t SCH_Add_Task(void (*pFunction)(), const uint32_t DELAY, const uint32_t PERIOD);
+
+#endif /* GLOBAL_H */
+
+/* scheduler.c */
+#include "global.h"
+
+sTask SCH_tasks_G[SCH_MAX_TASKS];
+uint8_t current_index_task = 0;
+
+void SCH_Init(void)
+{
+  for (int i = 0; i < SCH_MAX_TASKS; i++)
+  {
+    SCH_tasks_G[i].pTask = 0;
+    SCH_tasks_G[i].Delay = 0;
+    SCH_tasks_G[i].Period = 0;
+    SCH_tasks_G[i].RunMe = 0;
+  }
+}
+
+void SCH_Update(void)
+{
+  for (int i = 0; i < SCH_MAX_TASKS; i++)
+  {
+    if (SCH_tasks_G[i].pTask)
+    {
+      if (SCH_tasks_G[i].Delay == 0)
+      {
+        SCH_tasks_G[i].RunMe += 1;
+        if (SCH_tasks_G[i].Period)
+        {
+          SCH_tasks_G[i].Delay = SCH_tasks_G[i].Period;
+        }
+      }
+      else
+      {
+        SCH_tasks_G[i].Delay -= 1;
+      }
+    }
+  }
+}
+
+void SCH_Dispatch_Tasks(void)
+{
+  for (int i = 0; i < SCH_MAX_TASKS; i++)
+  {
+    if (SCH_tasks_G[i].RunMe > 0)
+    {
+      (*SCH_tasks_G[i].pTask)();
+      SCH_tasks_G[i].RunMe -= 1;
+      if (SCH_tasks_G[i].Period == 0)
+      {
+        SCH_tasks_G[i].pTask = 0;
+      }
+    }
+  }
+}
+
+uint8_t SCH_Add_Task(void (*pFunction)(), const uint32_t DELAY, const uint32_t PERIOD)
+{
+  uint8_t Index = 0;
+  while ((SCH_tasks_G[Index].pTask != 0) && (Index < SCH_MAX_TASKS))
+  {
+    Index++;
+  }
+  if (Index == SCH_MAX_TASKS)
+  {
+    return SCH_MAX_TASKS;
+  }
+
+  SCH_tasks_G[Index].pTask = pFunction;
+  SCH_tasks_G[Index].Delay = DELAY / 10; // Convert ms to ticks
+  SCH_tasks_G[Index].Period = PERIOD / 10; // Convert ms to ticks
+  SCH_tasks_G[Index].RunMe = 0;
+
+  return Index;
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Lab4_NTLuan/Core/Inc/input_processing&apos; to &apos;input_processing.h&apos;" description="Rename resource &apos;input_processing&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/input_processing" name="input_processing.h" stamp="1716013373108" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Lab4_NTLuan/Core/Src/software_timer.c&apos; to &apos;timer.c&apos;" description="Rename resource &apos;software_timer.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/software_timer.c" name="timer.c" stamp="1716013636122" updateReferences="true"/>
+</session>

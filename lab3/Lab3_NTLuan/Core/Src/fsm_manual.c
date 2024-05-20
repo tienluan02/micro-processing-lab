@@ -10,7 +10,7 @@
 
 
 
-void fsm_manual_run(){
+void fsm_run(){
 
 
 

@@ -14,6 +14,7 @@
 #include "control_led.h"
 #include "fsm_automatic.h"
 #include "fsm_manual.h"
+#include "scheduler.h"
 
 
 #define INIT		1
